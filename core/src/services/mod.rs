@@ -69,6 +69,8 @@ pub use ftp::FtpConfig;
 mod gcs;
 #[cfg(feature = "services-gcs")]
 pub use gcs::Gcs;
+#[cfg(feature = "services-gcs")]
+pub use gcs::GcsConfig;
 
 #[cfg(feature = "services-ghac")]
 mod ghac;
@@ -204,6 +206,8 @@ pub use supabase::Supabase;
 mod webdav;
 #[cfg(feature = "services-webdav")]
 pub use webdav::Webdav;
+#[cfg(feature = "services-webdav")]
+pub use webdav::WebdavConfig;
 
 #[cfg(feature = "services-webhdfs")]
 mod webhdfs;
@@ -258,6 +262,8 @@ pub use self::postgresql::PostgresqlConfig;
 mod atomicserver;
 #[cfg(feature = "services-atomicserver")]
 pub use self::atomicserver::Atomicserver;
+#[cfg(feature = "services-atomicserver")]
+pub use self::atomicserver::AtomicserverConfig;
 
 #[cfg(feature = "services-mysql")]
 mod mysql;
@@ -325,3 +331,10 @@ mod upyun;
 pub use upyun::Upyun;
 #[cfg(feature = "services-upyun")]
 pub use upyun::UpyunConfig;
+
+#[cfg(feature = "services-chainsafe")]
+mod chainsafe;
+#[cfg(feature = "services-chainsafe")]
+pub use chainsafe::Chainsafe;
+#[cfg(feature = "services-chainsafe")]
+pub use chainsafe::ChainsafeConfig;
